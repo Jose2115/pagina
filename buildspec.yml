@@ -1,4 +1,4 @@
-vversion: 0.2
+version: 0.2
 
 phases:
   install:
@@ -6,7 +6,7 @@ phases:
       - echo "Instalando dependencias y validando la fuente..."
   build:
     commands:
-      - echo "Compilando archivos en CodeBuilder..."
+      - echo "Compilando archivos en CodeBuilder para el ejercicio del 13 de Abril..."
   post_build:
     commands:
       - echo "Preparando los archivos para el almacenamiento en el Bucket de S3..."
