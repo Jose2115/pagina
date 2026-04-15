@@ -1,20 +1,17 @@
-version: 0.2
+vversion: 0.2
 
 phases:
   install:
     commands:
-      - echo "Installing..."
-    build:
-      commands:
-        - echo "Build docker"
-        - docker build -t flask-app ./app
-
+      - echo "Instalando dependencias y validando la fuente..."
+  build:
+    commands:
+      - echo "Compilando archivos en CodeBuilder..."
   post_build:
     commands:
-      - echo "Running deploy script" 
-      - chmod +x deploy.sh
-      - ./deploy.sh
+      - echo "Preparando los archivos para el almacenamiento en el Bucket de S3..."
 
 artifacts:
-  files: 
-    - '**/*'
+  files:
+    - 'pagina/**/*'
+    - '.gitignore'
