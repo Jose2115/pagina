@@ -2,17 +2,33 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 13 de Abril</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <img src="https://tecmilenio.mx/themes/custom/tecmilenio/logo.svg" alt="Logo Tecmilenio" class="logo">
-        
-        <h1>Datos del Estudiante</h1>
-        <p><strong>Nombre:</strong> Jose Miguel</p>
-        <p><strong>Correo:</strong> jose.miguel@ejemplo.com</p>
+        <img src="foto.jpg" alt="Logo Tecmilenio" class="logo">
+        <h1>Jose Miguel</h1>
+        <p>AL07102980@tecmilenio.mx</p>
+
+        <button onclick="mostrarVentana()">Ver Matrícula y Foto</button>
+
+        <div id="miVentana" style="display:none; margin-top: 20px; border: 1px solid #ccc; padding: 10px;">
+            <p><strong>Matrícula:</strong> AL07102980</p>
+            <img src="Perfil.jpg" alt="Mi Foto" style="width:150px;">
+            <br>
+            <button onclick="cerrarVentana()">Cerrar</button>
+        </div>
     </div>
+
+    <script>
+        function mostrarVentana() {
+            document.getElementById('miVentana').style.display = 'block';
+            alert("Cargando datos de matrícula..."); // Ventana de alerta adicional
+        }
+        function cerrarVentana() {
+            document.getElementById('miVentana').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
